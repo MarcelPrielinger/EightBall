@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" prefHeight="177.0" prefWidth="159.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllerview.login.LoginC">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Button fx:id="btnLogin" mnemonicParsing="false" onMouseClicked="#login" text="login" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Username" GridPane.columnIndex="1" />
+      <TextField fx:id="txtUser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="txtException" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>
