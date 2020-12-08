@@ -59,22 +59,33 @@ public class EightBallC implements Initializable {
       {
         if(txtQuestion.getText().contains("SEW"))
         {
-          txtEightBall.setText(model.Model.getPositivAnswer());
+          txtEightBall.setText(model.Model.getPositiveAnswer());
+          txtQuestion.setText("");
+        }
+
+        else if (txtQuestion.getText().contains("why") || txtQuestion.getText().contains("who") || txtQuestion.getText().contains("what") || txtQuestion.getText().contains("how") || txtQuestion.getText().contains("where") || txtQuestion.getText().contains("when") || txtQuestion.getText().contains("whose") || txtQuestion.getText().contains("whiche"))
+        {
+          txtEightBall.setText(model.Model.getNeutralAnswer());
+          txtQuestion.setText("");
         }
         else
         {
           txtEightBall.setText(model.Model.getRandomAnswer());
+          txtQuestion.setText("");
         }
       }
       else
       {
         txtException.setText("Not a Question!  Try again!");
         System.out.println("Not a Question!");
+        txtQuestion.setText("");
+        txtEightBall.setText("");
       }
     } catch (Exception e) {
       txtException.setText("Error!    Try again!");
       System.err.println(e.getMessage());
       e.printStackTrace(System.err);
+      txtQuestion.setText("");
     }
   }
 }

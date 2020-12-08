@@ -57,11 +57,13 @@ public class LoginC implements Initializable {
               System.out.println("Navigation started ...");
               EightBallC.show(new Stage(), "Hello from Welcome Controller!");
               stage.close();
-
           }
-          else {
+          else
+          {
               txtException.setText("Wrong user or password!   Try again!");
               System.out.println("Wrong user or password!");
+              txtPassword.setText("");
+              txtUser.setText("");
           }
       }
       catch (Exception e)
@@ -69,6 +71,8 @@ public class LoginC implements Initializable {
           txtException.setText("Error! Try again!");
           System.err.println(e.getMessage());
           e.printStackTrace(System.err);
+          txtPassword.setText("");
+          txtUser.setText("");
       }
     }
 }
