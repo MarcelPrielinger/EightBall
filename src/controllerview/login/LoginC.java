@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 
 public class LoginC implements Initializable {
   private Stage stage;
-  private model.Model model;
   @FXML
   private TextField txtUser;
   @FXML
@@ -51,25 +50,25 @@ public class LoginC implements Initializable {
   
   @FXML
   private void login() {
+      txtException.setText("");
       try {
-          if (model.isCorrectLogin(txtUser.getText(), txtPassword.getText())) {
+          if (model.Model.isCorrectLogin(txtUser.getText(), txtPassword.getText())) {
               //navigate from welcome screen to main screen
               System.out.println("Navigation started ...");
               EightBallC.show(new Stage(), "Hello from Welcome Controller!");
               stage.close();
-          } else {
-              txtException.setText("Wrong user or password!   Try again");
+
+          }
+          else {
+              txtException.setText("Wrong user or password!   Try again!");
+              System.out.println("Wrong user or password!");
           }
       }
       catch (Exception e)
       {
-          txtException.setText("Wrong user or password! Try again");
+          txtException.setText("Error! Try again!");
           System.err.println(e.getMessage());
           e.printStackTrace(System.err);
       }
-      //navigate from welcome screen to main screen
-      System.out.println("Navigation started ...");
-      EightBallC.show(new Stage(), "Hello from Welcome Controller!");
-      stage.close();
     }
 }

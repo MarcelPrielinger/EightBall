@@ -23,5 +23,6 @@
       <TextField fx:id="txtQuestion" layoutX="42.0" layoutY="235.0" promptText="Ask..." />
       <Label layoutX="102.0" layoutY="102.0" />
       <Label fx:id="txtEightBall" layoutX="102.0" layoutY="94.0" text="..." />
+      <Label fx:id="txtException" layoutX="41.0" layoutY="275.0" prefHeight="17.0" prefWidth="149.0" />
    </children>
 </Pane>
